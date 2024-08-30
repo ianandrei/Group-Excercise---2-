@@ -1,0 +1,139 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" rel="stylesheet">
+    <title>Group 2</title>
+    <style>
+        .swiper {
+            width: 100%;
+            height: 100%;
+        }
+        
+        body.night-theme {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        
+        body.night-theme .card {
+            background-color: #1e1e1e;
+        }
+        
+        body.night-theme .text-muted {
+            color: #b0b0b0; /* Adjust muted text color for night mode */
+        }
+
+        .card {
+            overflow: hidden; /* Prevent overflow of content */
+        }
+
+        .card img {
+            width: 100%; /* Make image responsive */
+            height: 300px; /* Set a fixed height for uniformity */
+            object-fit: cover; /* Cover the area while maintaining aspect ratio */
+            object-position: center; /* Center the image */
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center py-5">
+        <h2 class="text1">Group 2</h2>
+        <p class="text">INTPROG</p>
+        <button class="btn btn-light mb-4" onclick="toggleTheme()">Toggle Night/Day</button>
+
+        <div class="swiper">
+            <div class="swiper-wrapper">
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="leader.png" class="card-img-top" alt="Micael Aguzar">
+                        <div class="card-body">
+                            <h3 class="card-title">Micael Aguzar</h3>
+                            <p class="text-muted">Professional IT</p>
+                            <p class="card-text">Hi everyone, I'm the leader of this group team. Just a small quote "We must stay focused brothers!".</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="Clark.jpg" class="card-img-top" alt="Clark Jasper Bombasi">
+                        <div class="card-body">
+                            <h3 class="card-title">Clark Jasper Bombasi</h3>
+                            <p class="text-muted">IT#1</p>
+                            <p class="card-text">Hello, my name is Clark Jasper Bombasi and I've been studying IT for the past 3 years.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="Dumantay.jpg" class="card-img-top" alt="Crisostomo Dumantay">
+                        <div class="card-body">
+                            <h3 class="card-title">Crisostomo Dumantay</h3>
+                            <p class="text-muted">IT#2</p>
+                            <p class="card-text">I'm Crisostomo Dumantay. I was born to make mistakes, not to fake perfection.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="dwei.jpg" class="card-img-top" alt="Ian Andrei Porciuncula">
+                        <div class="card-body">
+                            <h3 class="card-title">Ian Andrei Porciuncula</h3>
+                            <p class="text-muted">IT#3</p>
+                            <p class="card-text">Hello. My name is Ian Andrei Porciuncula and I enjoy coding from time to time.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-slide">
+                    <div class="card">
+                        <img src="alard (2).jpg" class="card-img-top" alt="Carlos Alarde">
+                        <div class="card-body">
+                            <h3 class="card-title">Carlos Alarde</h3>
+                            <p class="text-muted">IT#4</p>
+                            <p class="card-text">My name is Carlo Alarde and I am always doing my very best to reach my goals in life.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Add Pagination -->
+            <div class="swiper-pagination"></div>
+            <!-- Add Navigation -->
+            <div class="swiper-button-next"></div>
+            <div class="swiper-button-prev"></div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script>
+        // Function to toggle night and day theme
+        function toggleTheme() {
+            const body = document.body;
+            body.classList.toggle('night-theme');
+        }
+
+        const swiper = new Swiper('.swiper', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+            breakpoints: {
+                768: {
+                    slidesPerView: 2,
+                    spaceBetween: 20,
+                },
+                1024: {
+                    slidesPerView: 3,
+                    spaceBetween: 30,
+                },
+            },
+        });
+    </script>
+</body>
+</html>
